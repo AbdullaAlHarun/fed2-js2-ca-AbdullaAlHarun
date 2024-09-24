@@ -1,55 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Noroff FED2 JS2 CA</title>
+    <title>Register - Noroff FED2 JS2 CA</title>
+
+    <!-- Link to your main JavaScript and CSS files -->
     <script type="module" src="/src/app.js"></script>
+    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
 
   <body>
-    <h1>Register</h1>
+    <!-- Navigation Section -->
+    <nav>
+      <img src="/src/images/logo.png" alt="Noroff Logo" class="logo" />
+      <h1>Register</h1>
 
-    <form name="register">
-      <div>
-        <label for="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          required
-          maxlength="20"
-          pattern="^[\w]+$"
-          title="Please enter a username using only letters and numbers"
-        />
+      <div class="nav-links">
+        <a href="/profile/">My Profile</a>
+        <a href="/auth/login/">Login</a>
+        <a href="/auth/register/">Register</a>
       </div>
+    </nav>
 
-      <div>
-        <label for="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          required
-          pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
-          title="Please enter a valid noroff.no or stud.noroff.no address"
-        />
-      </div>
+    <!-- Main content area -->
+    <main>
+      <!-- Register Section -->
+      <section id="register-section">
+        <h2>Create Your Account</h2>
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              required
+              maxlength="20"
+              pattern="^[\w]+$"
+              placeholder="Enter your name"
+              title="Please enter a username using only letters and numbers"
+            />
+          </div>
 
-      <div>
-        <label for="password">Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          required
-          minlength="8"
-        />
-      </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              required
+              pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
+              placeholder="Enter your email"
+              title="Please enter a valid noroff.no or stud.noroff.no address"
+            />
+          </div>
 
-      <a href="/auth/login/">Login</a>
-      <button>Register</button>
-    </form>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              required
+              minlength="8"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <button type="submit">Register</button>
+        </form>
+
+        <p id="registerError" style="color: red; display: none;">
+          Registration failed. Please try again.
+        </p>
+
+        <div class="auth-links">
+          <p>Already have an account? <a href="/auth/login/">Login here</a></p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 Noroff FED2 JS2 CA</p>
+    </footer>
   </body>
 </html>

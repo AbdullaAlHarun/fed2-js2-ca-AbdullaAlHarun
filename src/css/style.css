@@ -1,12 +1,186 @@
 @import url(_reset.css);
-.logo {
-    width: 300px; 
-    height: 200px
-}
 
-nav {
+
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body styling */
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+  
+  /* Navigation styling */
+  nav {
+    width: 100%;
+    background-color: #0077b6;
+    padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
+    justify-content: space-between;
+    color: #fff;
+  }
+  
+  nav img.logo {
+    height: 40px;
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-links button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .nav-links button:hover {
+    background-color: #c9302c;
+  }
+  
+  /* Main section styling */
+  main {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Login section */
+  #login-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #loginForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #loginForm button {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #loginForm button:hover {
+    background-color: #005f8d;
+  }
+  
+  #loginError {
+    text-align: center;
+    margin-top: 15px;
+    color: red;
+  }
+  
+
+  /* Registration section */
+  #register-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  #registerForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #registerForm button {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #registerForm button:hover {
+    background-color: #005f8d;
+  }
+  
+  #registerError {
+    text-align: center;
+    margin-top: 15px;
+    color: red;
+  }
+  
+  
+  /* Posts section */
+  #posts-section {
+    margin-top: 30px;
+  }
+  
+  #posts-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #posts-list div {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer styling */
+  footer {
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: #0077b6;
+    color: #fff;
+  }
+  
