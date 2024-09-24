@@ -7,6 +7,7 @@
 
     <!-- Link to your main JavaScript and CSS files -->
     <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/js/api/auth/register.js"></script>
     <link rel="stylesheet" href="/src/css/style.css" />
   </head>
 
@@ -67,11 +68,28 @@
               placeholder="Enter your password"
             />
           </div>
+          <div class="form-group">
+            <label for="bio">Bio (Optional):</label>
+            <textarea
+              id="bio"
+              name="bio"
+              placeholder="Tell us about yourself"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="avatarUrl">Avatar URL (Optional):</label>
+            <input
+              id="avatarUrl"
+              type="url"
+              name="avatarUrl"
+              placeholder="Link to your avatar image"
+            />
+          </div>
 
           <button type="submit">Register</button>
         </form>
 
-        <p id="registerError" style="color: red; display: none;">
+        <p id="registerError" style="color: red; display: none">
           Registration failed. Please try again.
         </p>
 
