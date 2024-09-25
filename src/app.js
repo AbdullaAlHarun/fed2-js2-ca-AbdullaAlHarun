@@ -1,32 +1,27 @@
 // app.js
-import "./css/style.css";
-import router from "./js/router";
 
-export function updateLogoutButton() {
+document.addEventListener("DOMContentLoaded", function () {
     const accessToken = localStorage.getItem("accessToken");
-    const logoutBtn = document.getElementById("logout-btn");
+    const logoutButton = document.getElementById("logout-btn");
+    const postsSection = document.getElementById("posts-section");
+    const welcomeMessage = document.querySelector("h2"); 
 
     if (accessToken) {
-        logoutBtn.style.display = "block"; // Show logout button
+        
+        logoutButton.style.display = "block";
+        welcomeMessage.innerText = "Welcome to the app!";
+        postsSection.style.display = "block";
     } else {
-        logoutBtn.style.display = "none"; // Hide logout button
+      
+        logoutButton.style.display = "none";
+        postsSection.style.display = "none"; 
+        welcomeMessage.innerText = "Please log in to see posts."; 
     }
-}
 
-// Call the function to update the button visibility on page load
-updateLogoutButton();
-
-// Function to handle logout
-document.getElementById("logout-btn").addEventListener("click", function() {
-    // Clear the access token and user profile from local storage
-    localStorage.removeItem("accessToken");
-    localStorage.removeItem("userProfile");
-
-    alert("You have been logged out.");
-    
-    // Redirect to the homepage (or login page)
-    window.location.href = "/index.html"; // Redirect to home page or any other page
+    // Logout functionality
+    logoutButton.addEventListener("click", function() {
+        localStorage.removeItem("accessToken");
+        alert("You have logged out successfully.");
+        window.location.href = "/auth/login/"; 
+    });
 });
-
-// Your router and other logic
-await router(window.location.pathname);
