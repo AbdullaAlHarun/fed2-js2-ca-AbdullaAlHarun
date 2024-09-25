@@ -2,7 +2,7 @@
 // In Workflow we will learn how to secure this information
 export const API_KEY = "replace-with-your-key";
 
-export const API_BASE = "https://v2.api.noroff.dev";
+export const API_BASE = "f27e848c-698d-41e5-886b-3dbaeddd23d5";
 
 export const API_AUTH = `${API_BASE}/auth`;
 
