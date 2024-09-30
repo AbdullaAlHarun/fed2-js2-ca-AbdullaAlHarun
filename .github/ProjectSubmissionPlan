@@ -1,0 +1,118 @@
+
+
+---
+
+## **Revised Project Submission Plan**
+
+### **Project Name**: Client-side Social Media Application  
+### **Delivery Date**: **2nd October, 23:59**  
+### **Team Members**: [Christian Westby] & [Abdulla Al Harun]
+
+---
+
+### **1. Phase 1: Core Features Development (CRUD & Authentication)**
+**Duration**: 3 days  
+**Deadline**: **25th September**
+
+#### **Focus**: Implement core functionality to create a working prototype early.
+
+- **Task**: Set up the development environment and clone the repository.
+- **Task**: Implement the registration and login features using JWT.
+- **Task**: Store JWT token in `localStorage` for session management.
+- **Task**: Develop the basic CRUD operations for posts:
+  - **Create, read, update, and delete posts**.
+- **Task**: Create a UI for:
+  - **User registration** and **login**.
+  - **Create and edit posts**.
+  - **Display recent posts (12 posts)**.
+
+**Milestone (25th September)**: A functioning version of user registration, login, and basic CRUD operations is implemented and can be tested.
+
+---
+
+### **2. Phase 2: Additional Features Development**
+**Duration**: 3 days  
+**Deadline**: **28th September**
+
+#### **Focus**: Enhance the app by adding additional API features and improving UI functionality.
+
+- **Task**: Add the following API features:
+  - **Follow/unfollow users**.
+  - **Comment on posts**.
+  - **React to posts** with an emoji (optional).
+- **Task**: Implement UI for:
+  - **Post comments** (if included).
+  - **Follow/unfollow** functionality.
+- **Task**: Create **error handling** for failed API calls, invalid inputs, and failed authentication.
+- **Task**: Add a **logout** button to clear the JWT token from `localStorage`.
+
+**Milestone (28th September)**: Core features are complete with enhanced API functionality, and error handling is in place.
+
+---
+
+### **3. Phase 3: Testing, Bug Fixing, & Code Refactoring**
+**Duration**: 2 days  
+**Deadline**: **30th September**
+
+#### **Focus**: Test, debug, and refine the code to ensure error-free and smooth performance.
+
+- **Task**: **Test all functionalities** thoroughly (registration, login, CRUD, comments, reactions, follow/unfollow).
+- **Task**: Fix any bugs encountered during testing.
+- **Task**: **Refactor** the code:
+  - Simplify large or repetitive code blocks.
+  - Improve readability and structure.
+  - Ensure variable and function names follow best practices.
+- **Task**: Write **JS Docs** for the key functions.
+
+**Milestone (30th September)**: All features are thoroughly tested, debugged, and refactored with clean, maintainable code.
+
+---
+
+### **4. Phase 4: Final Documentation and Review**
+**Duration**: 1 day  
+**Deadline**: **1st October**
+
+#### **Focus**: Finalize the project with proper documentation and a last review.
+
+- **Task**: Complete the **README.md** file, including:
+  - Project overview.
+  - API usage and features.
+  - Steps to run the project locally.
+  - Known issues or limitations.
+- **Task**: Perform a **final review** of the application:
+  - Check all user interface elements.
+  - Test the flow from registration to post creation and deletion.
+- **Task**: Push all changes to **GitHub** and ensure the repository is clean.
+
+**Milestone (1st October)**: The project is ready for submission with all documentation complete and the final review performed.
+
+---
+
+### **5. Phase 5: Final Submission**
+**Deadline**: **2nd October, 23:59**
+
+- **Task**: Ensure all features are working as expected, and the code has been pushed to GitHub.
+- **Task**: Submit the project via the required platform (GitHub repo link).
+- **Optional**:
+  - If available, submit additional deliverables (e.g., **deployment links**, Kanban board, or summary).
+
+---
+
+### **Revised Timeline Overview**
+
+| **Phase**                      | **Description**                                 | **Deadline**        |
+|---------------------------------|-------------------------------------------------|---------------------|
+| **Phase 1: Core Features**      | Registration, login, CRUD operations            | **25th September**  |
+| **Phase 2: Additional Features**| Follow/unfollow, comments, reactions, error handling | **28th September**  |
+| **Phase 3: Testing & Refactoring** | Testing, bug fixing, code refactoring         | **30th September**  |
+| **Phase 4: Documentation & Review** | README, final walkthrough, push code        | **1st October**     |
+| **Phase 5: Submission**         | Submit project                                 | **2nd October, 23:59** |
+
+---
+
+### **Buffer for Unforeseen Issues**
+- **Time Buffer**: Reserve **1–2 days (1st–2nd October)** for last-minute adjustments, debugging, or final improvements before submission.
+
+---
+
+By following this plan, you can ensure timely completion of the project by **2nd October** with all necessary features and testing.
