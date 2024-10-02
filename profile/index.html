@@ -1,25 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
-<body>
-    <div id="profileContainer">
-        <h1>User Profile</h1>
-        <div id="profileInfo">
-            <img id="avatar" src="" alt="User Avatar" />
-            <h2 id="name"></h2>
-            <p id="bio"></p>
-            <p id="email"></p>
-            <div id="banner"></div>
-            <h3>Followers: <span id="followersCount"></span></h3>
-            <h3>Following: <span id="followingCount"></span></h3>
-            <h3>Posts: <span id="postsCount"></span></h3>
-        </div>
-    </div>
-    <script src="/js/api/profile/read.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noroff FED2 JS2 CA</title>
+    <script type="module" src="/src/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/"> <img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo" /></a>
+
+      <nav>
+        <ul>
+          <li><a href="/profile/">My Profile</a></li>
+          <li><a href="/auth/login/">Login</a></li>
+          <li><a href="/auth/register/">Register</a></li>
+          <li><a href="/post/create/">Create Post</a></li>
+        </ul>
+      </nav>
+      <button class="logout">Logout</button>
+    </header>
+    <h1>Profile</h1>
+
+    <form name="updateProfile">
+      <button>Update Profile</button>
+    </form>
+  </body>
 </html>
