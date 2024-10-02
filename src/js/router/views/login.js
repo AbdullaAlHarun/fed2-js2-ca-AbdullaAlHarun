@@ -1,5 +1,13 @@
 import { onLogin } from "../../ui/auth/login";
-
+import { setLogoutListener } from '../../ui/global/logout';
+document.addEventListener('DOMContentLoaded', () => {
+    setLogoutListener();
+});
+ 
 const form = document.forms.login;
-
-form.addEventListener("submit", onLogin);
+ 
+if (form) {
+  form.addEventListener("submit", onLogin);
+} else {
+  console.error("Login form not found");
+}
