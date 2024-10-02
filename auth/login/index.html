@@ -1,55 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+ 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Noroff FED2 JS2 CA</title>
-
-    <!-- Link to your main JavaScript and CSS files -->
+    <title>Noroff FED2 JS2 CA</title>
     <script type="module" src="/src/app.js"></script>
-    <script type="module" src="/src/js/api/auth/login.js"></script>
-    <link rel="stylesheet" href="/src/css/style.css" />
   </head>
-
+ 
   <body>
-    <!-- Navigation Section -->
-    <nav>
-      <img src="/src/images/logo.png" alt="Noroff Logo" class="logo" />
-      <h1>Login</h1>
-
-      <div class="nav-links">
-        <a href="/profile/">My Profile</a>
-        <a href="/auth/login/">Login</a>
-        <a href="/auth/register/">Register</a>
+    <header>
+      <a href="/"> <img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo" /></a><img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="/profile/">My Profile</a></li>
+          <li><a href="/auth/login/">Login</a></li>
+          <li><a href="/auth/register/">Register</a></li>
+          <li><a href="/post/create/">Create Post</a></li>
+        </ul>
+      </nav>
+      <button class="logout">Logout</button>
+    </header>
+    <h1>Login</h1>
+    <form name="login">
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required />
       </div>
-    </nav>
-
-    <!-- Main content area -->
-    <main>
-      <!-- Login Section -->
-      <section id="login-section">
-        <h2>Login to Your Account</h2>
-        <form id="loginForm">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required placeholder="Enter your email" />
-
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" required placeholder="Enter your password" />
-
-          <button type="submit">Login</button>
-        </form>
-        <p id="loginError" style="color: red; display: none;">Invalid login credentials. Please try again.</p>
-
-        <div class="auth-links">
-          <p>Don't have an account? <a href="/auth/register/">Register here</a></p>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2023 Noroff FED2 JS2 CA</p>
-    </footer>
+ 
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required />
+      </div>
+ 
+      <a href="/auth/register/">Register</a>
+      <button>Login</button>
+    </form>
   </body>
 </html>
-
