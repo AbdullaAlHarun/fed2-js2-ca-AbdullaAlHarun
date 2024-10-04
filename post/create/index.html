@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,10 +7,10 @@
     <script type="module" src="/src/app.js"></script>
   </head>
   <body>
-
-    
     <header>
-      <a href="/"> <img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo" /></a>
+      <a href="/">
+        <img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo"
+      /></a>
       <nav>
         <ul>
           <li><a href="/profile/">My Profile</a></li>
@@ -19,12 +19,44 @@
           <li><a href="/post/create/">Create Post</a></li>
         </ul>
       </nav>
-      <button class="logout">Logout</button>
+      <button id="logoutBtn">Logout</button>
     </header>
     <h1>Create Post</h1>
 
-    <form name="createPost">
-      <button>Create Post</button>
+    <form id="create-form" name="createPost">
+      <div>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+      </div>
+      <div>
+        <label for="body">Your text:</label>
+        <textarea id="body" name="body" rows="8"></textarea>
+      </div>
+      <div>
+        <label for="image">Select image URL:</label>
+        <input
+          type="url"
+          id="image"
+          name="media"
+          placeholder="enter image URL"
+        />
+      </div>
+
+      <div>
+        <label for="alt">Select alt text for image:</label>
+        <input type="text" id="alt" name="alt" placeholder="Media Alt Text" />
+      </div>
+
+      <div>
+        <label for="tag">Tag:</label>
+        <input type="text" id="tag" name="tag" placeholder="Tag" />
+      </div>
+
+      <button type="submit">Create Post</button>
     </form>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 Noroff FED2 JS2 CA</p>
+    </footer>
   </body>
 </html>
