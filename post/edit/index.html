@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,9 +9,10 @@
   </head>
 
   <body>
-    
     <header>
-      <a href="/"> <img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo" /></a>
+      <a href="/">
+        <img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo"
+      /></a>
       <nav>
         <ul>
           <li><a href="/profile/">My Profile</a></li>
@@ -20,12 +21,38 @@
           <li><a href="/post/create/">Create Post</a></li>
         </ul>
       </nav>
-      <button class="logout">Logout</button>
+      <button id="logoutBtn">Logout</button>
     </header>
     <h1>Edit Post</h1>
-
-    <form name="editPost">
-      <button>Edit Post</button>
-    </form>
+    <div id="edit-post-form-container">
+      <form id="editPostForm">
+        <div>
+          <label for="title">Title</label>
+          <input id="title" type="text" name="title" required />
+        </div>
+        <div>
+          <label for="body">Body</label>
+          <textarea id="body" name="body" required></textarea>
+        </div>
+        <div>
+          <label for="tags">Tags (comma-separated)</label>
+          <input id="tags" type="text" name="tags" />
+        </div>
+        <div>
+          <label for="media-url">Media URL</label>
+          <input id="media-url" type="text" name="media-url" />
+        </div>
+        <div>
+          <label for="media-alt">Media Alt Text</label>
+          <input id="media-alt" type="text" name="media-alt" />
+        </div>
+        <button type="submit">Update Post</button>
+        <button type="button" onclick="window.history.back()">Cancel</button>
+      </form>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 Noroff FED2 JS2 CA</p>
+    </footer>
   </body>
 </html>
