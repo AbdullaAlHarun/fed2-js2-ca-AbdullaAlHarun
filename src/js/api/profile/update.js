@@ -1,39 +1,32 @@
-import { API_SOCIAL_PROFILES } from "../constants";
+import {API_SOCIAL_PROFILES, API_KEY} from "../constants";
+import {getKey} from "../auth/key";
 
-export async function updateProfile(bio, { avatar, banner }) {
-  const myHeaders = new Headers();
-  myHeaders.append("X-Noroff-API-Key", API_KEY);
 
-  const token = await getKey();
-  myHeaders.append("Authorization", `Bearer ${token}`);
-  myHeaders.append("Content-Type", "application/json");
+export async function updateProfile(profileData) {
+    const myHeaders = new Headers();
+    myHeaders.append("X-Noroff-API-Key", API_KEY);
 
-  const rawData = {
-    bio: bio,
-    banner: {
-      url: banner,
-      alt: "banner alt",
-    },
-    avatar: {
-      url: avatar,
-      alt: "avatar alt",
-    },
-  };
+    const token = await getKey();
+    myHeaders.append("Authorization", `Bearer ${token}`);
+    myHeaders.append("Content-Type", "application/json");
 
-  const requestOptions = {
-    method: "PUT",
-    headers: myHeaders,
-    body: JSON.stringify(rawData),
-    redirect: "follow",
-  };
+    const username = localStorage.getItem('userID');
 
-  return fetch(API_SOCIAL_PROFILES, requestOptions)
-    .then((response) => response.json())
-    .then((result) => {
-      return result;
-    })
-    .catch((error) => {
-      console.error(error);
-      throw error;
-    });
+    const headerOptions = {
+        method: "PUT",
+        headers: myHeaders,
+        body: JSON.stringify(profileData),
+        redirect: "follow"
+    };
+
+    try {
+        const response = await fetch(`${API_SOCIAL_PROFILES}/${username}`, headerOptions);
+        if (!response.ok) {
+            throw new Error(`Failed to update profile: ${response.statusText}`);
+        }
+        console.log('Profile updated successfully');
+    } catch (error) {
+        console.error("Error updating profile:", error);
+        throw error;
+    }
 }
