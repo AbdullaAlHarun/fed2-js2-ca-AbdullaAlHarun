@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,7 +9,9 @@
   </head>
   <body>
     <header>
-      <a href="/"> <img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo" /></a>
+      <a href="/">
+        <img src="/images/noroff-logo.png" alt="Noroff Logo" class="logo"
+      /></a>
 
       <nav>
         <ul>
@@ -23,8 +25,58 @@
     </header>
     <h1>Profile</h1>
 
-    <form name="updateProfile">
-      <button>Update Profile</button>
+    <div id="editProfileSection" style="display: none">
+      <button
+        style="background-color: green; margin: 8px; padding: 4px"
+        id="editProfileButton"
+      >
+        Edit Profile
+      </button>
+    </div>
+
+    <form id="updateProfileForm" style="display: none">
+      <div>
+        <label for="bio">Bio</label>
+        <input id="bio" type="text" name="bio" required />
+      </div>
+      <div>
+        <label for="avatar-url">Avatar URL</label>
+        <input id="avatar-url" type="text" name="avatar-url" required />
+      </div>
+      <div>
+        <label for="avatar-alt">Avatar Alt Text</label>
+        <input id="avatar-alt" type="text" name="avatar-alt" />
+      </div>
+      <div>
+        <label for="banner-url">Banner URL</label>
+        <input id="banner-url" type="text" name="banner-url" required />
+      </div>
+      <div>
+        <label for="banner-alt">Banner Alt Text</label>
+        <input id="banner-alt" type="text" name="banner-alt" />
+      </div>
+      <button type="submit">Update Profile</button>
     </form>
+
+    <main class="main-content">
+      <aside class="sidebar">
+        <div class="profile-container" id="profileContainer"></div>
+      </aside>
+
+      <section class="content">
+        <div class="profile-banner">
+          <img src="" alt="Profile Banner" id="profileBannerImage" />
+        </div>
+
+        <p class="myPosts">My posts</p>
+
+        <div id="posts-container"></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2023 Noroff FED2 JS2 CA</p>
+    </footer>
   </body>
 </html>
