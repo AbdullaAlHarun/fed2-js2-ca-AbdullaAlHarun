@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /**
  * Retrieves the post ID from the URL query parameters.
-*/
+ *
+ * @function getPostIDFromURL
+ * @returns {string|null} The post ID retrieved from the URL or null if not found.
+ */
 function getPostIDFromURL() {
     const params = new URLSearchParams(window.location.search);
     return params.get('postID');
@@ -17,7 +20,12 @@ function getPostIDFromURL() {
 
 /**
  * Fetches the post data using the post ID and populates the form with the post's current values.
-*/
+ *
+ * @async
+ * @function renderEditForm
+ * @returns {Promise<void>} A promise that resolves once the form is populated with post data.
+ * @throws Will display an error message if the post data cannot be fetched.
+ */
 async function renderEditForm() {
     const postID = getPostIDFromURL();
     console.log('Post ID for editing:', postID);
@@ -40,7 +48,11 @@ async function renderEditForm() {
 
 /**
  * Displays an error message in the form container.
-*/
+ *
+ * @function displayError
+ * @param {string} message - The error message to display.
+ * @returns {void}
+ */
 function displayError(message) {
     const formContainer = document.getElementById('edit-post-form-container');
     formContainer.innerHTML = `<p class="error-message">${message}</p>`;
@@ -48,7 +60,13 @@ function displayError(message) {
 
 /**
  * Handles form submission, gathers the updated post data, and sends it to the server for updating.
-*/
+ *
+ * @async
+ * @function onSubmit
+ * @param {Event} event - The form submission event.
+ * @returns {Promise<void>} A promise that resolves when the post is successfully updated.
+ * @throws Will alert the user if the post update fails.
+ */
 document.getElementById('editPostForm').addEventListener('submit', async function (event) {
     event.preventDefault();
 

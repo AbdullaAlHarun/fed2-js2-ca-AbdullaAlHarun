@@ -1,11 +1,12 @@
 import { onLogin } from "../../ui/auth/login";
-import { setLogoutListener } from '../../ui/global/logout';
+
+import { setLogoutListener } from '../../ui/global/logout.js';
 document.addEventListener('DOMContentLoaded', () => {
-    setLogoutListener();
+    setLogoutListener(); 
 });
- 
+
 const form = document.forms.login;
- 
+
 if (form) {
   form.addEventListener("submit", onLogin);
 } else {
